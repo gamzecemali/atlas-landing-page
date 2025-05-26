@@ -1,0 +1,271 @@
+.section7 {
+  width: 100%;
+  padding: 80px 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section7-container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+/* Header Styles */
+.section7-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.section7-title {
+  font-family: 'Geometos', sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: 0.15em;
+  text-align: center;
+  margin: 0;
+  background: linear-gradient(135deg, #FFFFFF 10.93%, #DDDDDD 97.22%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: lowercase;
+}
+
+.section7-description {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.21;
+  text-align: center;
+  color: #D9D9D9;
+  margin: 0;
+}
+
+/* Clients Grid */
+.section7-clients {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  width: 100%;
+}
+
+.clients-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 96px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Client Card Styles */
+.client-card {
+  position: relative;
+  width: 114px;
+  height: 114px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.client-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.client-logo-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  transition: all 0.3s ease;
+  background: radial-gradient(circle at center, 
+    rgba(255, 255, 255, 0.08) 0%, 
+    rgba(255, 255, 255, 0.04) 40%, 
+    rgba(255, 255, 255, 0.02) 70%, 
+    transparent 100%);
+  backdrop-filter: blur(1px);
+}
+
+.logo-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-logo {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: brightness(1.2) contrast(1.1);
+  transition: all 0.6s ease;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.client-logo.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(0);
+}
+
+.client-logo.inactive {
+  opacity: 0;
+  transform: translate(-50%, -50%) translateY(20px);
+}
+
+/* Hover Effects */
+.client-card:hover {
+  transform: translateY(-5px);
+}
+
+.client-card:hover .client-frame {
+  opacity: 1;
+  filter: drop-shadow(0 0 15px rgba(76, 228, 255, 0.6));
+}
+
+.client-card:hover .client-logo.active {
+  filter: brightness(1.4) contrast(1.2);
+  transform: translate(-50%, -50%) translateY(0) scale(1.1);
+}
+
+.client-card:hover .client-logo.inactive {
+  transform: translate(-50%, -50%) translateY(20px) scale(1.1);
+}
+
+.client-card:hover .client-logo-container {
+  transform: translate(-50%, -50%) scale(1.05);
+  background: radial-gradient(circle at center, 
+    rgba(255, 255, 255, 0.15) 0%, 
+    rgba(255, 255, 255, 0.08) 40%, 
+    rgba(255, 255, 255, 0.04) 70%, 
+    transparent 100%);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .clients-row {
+    gap: 60px;
+  }
+  
+  .section7-title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section7-container {
+    gap: 48px;
+    padding: 0 16px;
+  }
+  
+  .section7-title {
+    font-size: 32px;
+  }
+  
+  .section7-description {
+    font-size: 16px;
+  }
+  
+  .clients-row {
+    gap: 40px;
+  }
+  
+  .client-card {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .client-logo-container {
+    width: 84px;
+    height: 84px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section7 {
+    padding: 60px 0;
+  }
+  
+  .section7-container {
+    gap: 36px;
+  }
+  
+  .section7-title {
+    font-size: 28px;
+  }
+  
+  .clients-row {
+    gap: 24px;
+    justify-content: space-around;
+  }
+  
+  .client-card {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .client-logo-container {
+    width: 68px;
+    height: 68px;
+  }
+}
+
+/* Custom animations and gradients that Tailwind doesn't support */
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom radial gradient utility */
+.bg-gradient-radial {
+  background: radial-gradient(circle at center, var(--tw-gradient-stops));
+}
+
+/* Hover state for radial gradient */
+.hover\:bg-gradient-radial:hover {
+  background: radial-gradient(circle at center, var(--tw-gradient-stops));
+} 

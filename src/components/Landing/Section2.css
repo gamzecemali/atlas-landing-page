@@ -1,0 +1,59 @@
+
+/* Base styles for all image containers */
+.image-variant-1,
+.image-variant-2,
+.image-variant-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+/* Individual animations for each variant */
+.image-variant-11 {
+  transition: opacity 0.5s ease-in-out;
+  animation: fadeSequence1 12s ease-in-out infinite;
+}
+
+.image-variant-21 {
+  transition: opacity 0.5s ease-in-out;
+  animation: fadeSequence2 12s ease-in-out infinite;
+}
+
+.image-variant-31 {
+  transition: opacity 0.5s ease-in-out;
+  animation: fadeSequence3 12s ease-in-out infinite;
+}
+
+/* Animation keyframes for variant 1 (starts immediately) */
+@keyframes fadeSequence1 {
+  0% { opacity: 1; }
+  25% { opacity: 0.5; }
+  33.33% { opacity: 0; }
+  91.67% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Animation keyframes for variant 2 (starts at 33.33%) */
+@keyframes fadeSequence2 {
+  0% { opacity: 0; }
+  25% { opacity: 0.5; }
+  33.33% { opacity: 1; }
+  58.33% { opacity: 1; }
+  66.67% { opacity: 0.5; }
+  100% { opacity: 0; }
+}
+
+/* Animation keyframes for variant 3 (starts at 66.67%) */
+@keyframes fadeSequence3 {
+  0% { opacity: 0; }
+  33.33% { opacity: 0.5; }
+  58.33% { opacity: 1; }
+  66.67% { opacity: 1; }
+  91.67% { opacity: 0.5; }
+  100% { opacity: 0; }
+}
+
+

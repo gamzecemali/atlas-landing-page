@@ -1,0 +1,65 @@
+/* Custom font family for title */
+.section8-title {
+  font-family: 'Geometos', sans-serif;
+}
+
+/* Ticker wrapper with mask for fade effect */
+.section8-ticker-wrapper {
+  mask: linear-gradient(
+    90deg,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+/* Ticker content with animation */
+.section8-ticker-content {
+  animation: section8-scroll 30s linear infinite;
+  width: fit-content;
+}
+
+/* Scroll animation */
+@keyframes section8-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Gradient overlays */
+.section8-gradient-left {
+  background: linear-gradient(90deg, #000 0%, transparent 100%);
+}
+
+.section8-gradient-right {
+  background: linear-gradient(270deg, #000 0%, transparent 100%);
+}
+
+/* Pause animation on hover */
+.section8-ticker-wrapper:hover .section8-ticker-content {
+  animation-play-state: paused;
+}
+
+/* Responsive adjustments for animation speed */
+@media (max-width: 768px) {
+  .section8-ticker-content {
+    animation-duration: 25s;
+  }
+}
+
+@media (max-width: 480px) {
+  .section8-ticker-content {
+    animation-duration: 20s;
+  }
+} 
