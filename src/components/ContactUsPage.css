@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
+  padding-top: 100px;
   font-family: 'Inter', sans-serif;
 }
 
@@ -254,6 +255,10 @@
 }
 
 @media (max-width: 768px) {
+  .contact-us-page {
+    padding-top: 120px;
+  }
+  
   .contact-container {
     padding: 24px 16px;
     gap: 32px;
@@ -277,6 +282,7 @@
 @media (max-width: 480px) {
   .contact-us-page {
     padding: 10px;
+    padding-top: 140px;
   }
   
   .contact-container {
