@@ -42,7 +42,7 @@ const Section41 = () => {
   };
 
   return (
-    <div className='relative min-h-screen w-full bg-black overflow-hidden'>
+    <div className='relative min-h-[140vh] sm:min-h-[130vh] md:min-h-[120vh] lg:min-h-[110vh] w-full bg-black overflow-hidden pb-32 sm:pb-36 md:pb-40 lg:pb-44'>
       {/* Background with animated concentric circles */}
       <div className='absolute inset-0 flex items-center justify-center'>
         {/* Outermost circle layer */}
@@ -285,7 +285,7 @@ const Section41 = () => {
       </div>
 
       {/* Static content cards on the sides - RESPONSIVE LAYOUT */}
-      <div className='absolute inset-0 flex flex-col xl:flex-row xl:items-center xl:justify-between px-4 sm:px-8 md:px-16 lg:px-20 xl:px-[60px] 2xl:px-[80px] 3xl:px-[120px] py-8 xl:py-0'>
+      <div className='absolute inset-0 flex flex-col xl:flex-row xl:items-center xl:justify-between px-4 sm:px-8 md:px-16 lg:px-20 xl:px-[60px] 2xl:px-[80px] 3xl:px-[120px] py-8 xl:py-0 mt-20 sm:mt-24 md:mt-28 lg:mt-32'>
         {/* Left side cards */}
         <div className='flex flex-col gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-[120px] 2xl:gap-[157px] mb-8 xl:mb-0'>
           <div 
