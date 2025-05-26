@@ -36,7 +36,7 @@ const Section42 = () => {
   ]
 
   return (
-    <div className="flex flex-col items-stretch gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-8 md:px-16 lg:px-20 xl:px-[80px] 2xl:px-[120px] pt-32 sm:pt-36 md:pt-40 lg:pt-44 pb-8 sm:pb-16 md:pb-20 lg:pb-[120px] mt-24 sm:mt-28 md:mt-32 lg:mt-36">
+    <div className="flex flex-col items-stretch gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-8 md:px-16 lg:px-20 xl:px-[80px] 2xl:px-[120px] pt-4 sm:pt-6 md:pt-8 lg:pt-10 pb-8 sm:pb-16 md:pb-20 lg:pb-[120px] mt-0">
       {/* Header Section */}
       <div className="flex flex-col justify-center items-center gap-3 sm:gap-4 md:gap-6">
         <h2 

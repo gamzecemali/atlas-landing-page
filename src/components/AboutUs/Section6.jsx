@@ -3,7 +3,7 @@ import backgroundImage from '../../assets/images/aboutus-image.png'
 
 const Section6 = () => {
   return (
-    <div className="relative w-full h-svh flex flex-col justify-center items-center overflow-hidden">
+    <div className="relative w-full h-[80vh] sm:h-[85vh] md:h-[90vh] flex flex-col justify-center items-center overflow-hidden mb-0 pb-0">
       {/* Background Image */}
       <div 
         className="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat"

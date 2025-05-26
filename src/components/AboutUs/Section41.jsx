@@ -42,7 +42,7 @@ const Section41 = () => {
   };
 
   return (
-    <div className='relative min-h-[140vh] sm:min-h-[130vh] md:min-h-[120vh] lg:min-h-[110vh] w-full bg-black overflow-hidden pb-32 sm:pb-36 md:pb-40 lg:pb-44'>
+    <div className='relative min-h-[100vh] sm:min-h-[100vh] md:min-h-[100vh] lg:min-h-[100vh] w-full bg-black overflow-hidden pb-8 sm:pb-10 md:pb-12 lg:pb-16 mt-0 pt-0'>
       {/* Background with animated concentric circles */}
       <div className='absolute inset-0 flex items-center justify-center'>
         {/* Outermost circle layer */}
