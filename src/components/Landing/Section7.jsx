@@ -15,8 +15,8 @@ import vodafoneLogo from '../../assets/clients/vodafone.png'
 
 // SVG Frame Component - Enhanced Figma design with vibrant turquoise effects and shadows
 const ClientFrame = ({ index }) => (
-  <svg width="114" height="114" viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute top-0 left-0 w-full h-full transition-all duration-300 opacity-80 hover:opacity-100 hover:drop-shadow-[0_0_25px_rgba(0,212,255,0.8)] hover:filter hover:brightness-110">
-    <g clipPath={`url(#clip0_14201_65_${index})`} filter={`url(#filter0_d_14201_65_${index})`}>
+  <svg width="114" height="114" viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute top-0 left-0 w-full h-full transition-all duration-300 opacity-80 hover:opacity-100 hover:drop-shadow-[0_0_25px_rgba(0,212,255,0.8)] hover:filter hover:brightness-110" style={{backgroundColor: 'transparent', background: 'transparent'}}>
+    <g clipPath={`url(#clip0_14201_65_${index})`} filter={`url(#filter0_d_14201_65_${index})`} style={{backgroundColor: 'transparent', background: 'transparent'}}>
       {/* Top Left Corner */}
       <mask id={`path-1-inside-1_14201_65_${index}`} fill="white">
         <path fillRule="evenodd" clipRule="evenodd" d="M11.7353 0V6.12198H5.87239V12.2143H0V0H11.7353Z"/>
@@ -165,11 +165,22 @@ const AnimatedClientCard = ({ clientPair, index, animationDelay }) => {
 
   return (
     <div 
-      className="relative w-[80px] h-[80px] sm:w-[95px] sm:h-[95px] md:w-[114px] md:h-[114px] flex justify-center items-center bg-transparent !bg-none cursor-pointer transition-all duration-300 opacity-0 translate-y-5 animate-[fadeInUp_0.6s_ease_forwards] hover:-translate-y-1"
-      style={{ animationDelay: animationDelay, background: 'transparent' }}
+      className="client-card-container relative w-[80px] h-[80px] sm:w-[95px] sm:h-[95px] md:w-[114px] md:h-[114px] flex justify-center items-center opacity-0 translate-y-5 animate-[fadeInUp_0.6s_ease_forwards] hover:-translate-y-1"
+      style={{ 
+        animationDelay: animationDelay, 
+        backgroundColor: 'transparent', 
+        background: 'transparent',
+        backgroundImage: 'none'
+      }}
     >
       <ClientFrame index={`card_${index}`} />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 flex justify-center items-center z-[2] transition-all duration-300 bg-gradient-radial from-white/15 via-white/8 to-white/2 backdrop-blur-sm hover:scale-105 hover:bg-gradient-radial hover:from-white/25 hover:via-white/15 hover:to-white/5 ">
+      <div 
+        className="client-logo-wrapper absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 flex justify-center items-center z-[2] transition-all duration-300"
+        style={{
+          background: 'radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 40%, rgba(255, 255, 255, 0.02) 70%, transparent 100%)',
+          backdropFilter: 'blur(1px)'
+        }}
+      >
         <div className="relative w-10 sm:w-12 md:w-16 h-10 sm:h-12 md:h-16 mx-auto">
           <img 
             src={clientPair.primary.logo} 
@@ -216,47 +227,49 @@ const Section7 = () => {
   ]
 
   return (
-    <section className="w-full py-10 sm:py-14 md:py-16 lg:py-20 bg-black flex justify-center items-center" style={{ backgroundColor: '#000', background: '#000' }}>
-      <div className="max-w-6xl w-full px-4 sm:px-5 flex flex-col items-center gap-8 sm:gap-10 md:gap-12 lg:gap-16">
-        {/* Header */}
-        <div className="flex flex-col items-center gap-2 w-full">
-          <h2 className="font-normal text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-[1.1] tracking-wide sm:tracking-wider md:tracking-[0.15em] text-center m-0 bg-gradient-to-br from-white via-white to-gray-300 bg-clip-text text-transparent">
-            OUR CLIENTS & PARTNERS
-          </h2>
-          <p className="font-['Inter'] font-semibold text-xs sm:text-sm md:text-base lg:text-lg leading-[1.21] text-center text-gray-300 m-0">
-            We work with 50+ enterprises.<br />
-            Here are some of them.
-          </p>
-        </div>
-
-        {/* Client Logos */}
-        <div className="flex flex-col items-center gap-6 sm:gap-7 md:gap-8 lg:gap-9 w-full">
-          {/* First Row */}
-          <div className="flex justify-center items-center flex-wrap gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 w-full">
-            {clientsRow1.map((clientPair, index) => (
-              <AnimatedClientCard 
-                key={`row1_${index}`}
-                clientPair={clientPair}
-                index={index}
-                animationDelay={`${index * 0.1}s`}
-              />
-            ))}
+    <div className="section7-wrapper" style={{backgroundColor: '#000000', background: '#000000'}}>
+      <section className="section7-container-main w-full py-10 sm:py-14 md:py-16 lg:py-20 flex justify-center items-center" style={{backgroundColor: '#000000', background: '#000000'}}>
+        <div className="max-w-6xl w-full px-4 sm:px-5 flex flex-col items-center gap-8 sm:gap-10 md:gap-12 lg:gap-16" style={{backgroundColor: '#000000', background: '#000000'}}>
+          {/* Header */}
+          <div className="flex flex-col items-center gap-2 w-full">
+            <h2 className="font-normal text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-[1.1] tracking-wide sm:tracking-wider md:tracking-[0.15em] text-center m-0 bg-gradient-to-br from-white via-white to-gray-300 bg-clip-text text-transparent">
+              OUR CLIENTS & PARTNERS
+            </h2>
+            <p className="font-['Inter'] font-semibold text-xs sm:text-sm md:text-base lg:text-lg leading-[1.21] text-center text-gray-300 m-0">
+              We work with 50+ enterprises.<br />
+              Here are some of them.
+            </p>
           </div>
 
-          {/* Second Row */}
-          <div className="flex justify-center items-center flex-wrap gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 w-full">
-            {clientsRow2.map((clientPair, index) => (
-              <AnimatedClientCard 
-                key={`row2_${index}`}
-                clientPair={clientPair}
-                index={index}
-                animationDelay={`${(index * 0.1) + 0.25}s`}
-              />
-            ))}
+          {/* Client Logos */}
+          <div className="flex flex-col items-center gap-6 sm:gap-7 md:gap-8 lg:gap-9 w-full" style={{backgroundColor: '#000000', background: '#000000'}}>
+            {/* First Row */}
+            <div className="flex justify-center items-center flex-wrap gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 w-full" style={{backgroundColor: '#000000', background: '#000000'}}>
+              {clientsRow1.map((clientPair, index) => (
+                <AnimatedClientCard 
+                  key={`row1_${index}`}
+                  clientPair={clientPair}
+                  index={index}
+                  animationDelay={`${index * 0.1}s`}
+                />
+              ))}
+            </div>
+
+            {/* Second Row */}
+            <div className="flex justify-center items-center flex-wrap gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 w-full" style={{backgroundColor: '#000000', background: '#000000'}}>
+              {clientsRow2.map((clientPair, index) => (
+                <AnimatedClientCard 
+                  key={`row2_${index}`}
+                  clientPair={clientPair}
+                  index={index}
+                  animationDelay={`${(index * 0.1) + 0.25}s`}
+                />
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   )
 }
 

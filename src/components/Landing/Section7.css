@@ -286,6 +286,46 @@
 .bg-transparent {
   background-color: transparent !important;
   background: none !important;
+  background-image: none !important;
+}
+
+/* Override for all devices */
+.section7-wrapper,
+.section7-container-main,
+.section7-wrapper *,
+.section7-container-main * {
+  background-color: #000000 !important;
+}
+
+.client-card-container,
+.client-card-container * {
+  background-color: transparent !important;
+  background: transparent !important;
+  background-image: none !important;
+}
+
+.client-logo-wrapper {
+  background: radial-gradient(circle at center, 
+    rgba(255, 255, 255, 0.15) 0%, 
+    rgba(255, 255, 255, 0.08) 40%, 
+    rgba(255, 255, 255, 0.02) 70%, 
+    transparent 100%) !important;
+}
+
+/* Fix for iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */ 
+  .section7-wrapper,
+  .section7-container-main {
+    background-color: #000000 !important;
+    background: #000000 !important;
+  }
+  
+  .client-card-container {
+    background-color: transparent !important;
+    background: transparent !important;
+    background-image: none !important;
+  }
 }
 
 /* Fix for mobile devices */
@@ -306,5 +346,42 @@
       rgba(255, 255, 255, 0.04) 40%, 
       rgba(255, 255, 255, 0.02) 70%, 
       transparent 100%) !important;
+  }
+}
+
+/* iPhone specific fix */
+@media not all and (min-resolution:.001dpcm) { 
+  @supports (-webkit-appearance:none) {
+    .section7-wrapper {
+      background-color: #000000 !important;
+      background: #000000 !important;
+    }
+    
+    .section7-container-main {
+      background-color: #000000 !important;
+      background: #000000 !important;
+    }
+    
+    .client-card-container {
+      background-color: transparent !important;
+      background: transparent !important;
+      background-image: none !important;
+    }
+  }
+}
+
+/* iPhone X and newer */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) {
+  body {
+    background-color: #000000 !important;
+  }
+  
+  .section7-wrapper,
+  .section7-container-main {
+    background-color: #000000 !important;
+    background: #000000 !important;
   }
 } 
