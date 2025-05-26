@@ -8,7 +8,7 @@ const Section2 = () => {
   return (
     <div className='relative h-screen w-full bg-black overflow-hidden'>
       {/* Background images with animation */}
-      <div className='w-full h-full absolute top-0 left-0 scale-50 sm:scale-60 md:scale-70 lg:scale-75'>
+      <div className='w-full h-full absolute top-0 left-0 scale-75 sm:scale-85 md:scale-90 lg:scale-100'>
         <div className='w-full h-full relative'>
           <div className="absolute top-0 left-0 w-full h-full image-variant-12">
             <img 
@@ -36,8 +36,8 @@ const Section2 = () => {
         </div>
       </div>
 
-      {/* Background blur ellipse */}
-      <div className='absolute top-0 left-1/2 transform -translate-x-1/2 w-[400px] h-[400px] sm:w-[500px] sm:h-[500px] md:w-[600px] md:h-[600px] lg:w-[695px] lg:h-[695px] rounded-full bg-gradient-to-br from-[#ADD9DC] via-[#07D2FB66] to-white opacity-40 blur-[100px] sm:blur-[120px] md:blur-[140px] lg:blur-[165px]'></div>
+      {/* Background blur ellipse - adjusted for mobile */}
+      <div className='absolute top-1/4 sm:top-0 left-1/2 transform -translate-x-1/2 w-[500px] h-[500px] sm:w-[600px] sm:h-[600px] md:w-[700px] md:h-[700px] lg:w-[800px] lg:h-[800px] rounded-full bg-gradient-to-br from-[#ADD9DC] via-[#07D2FB66] to-white opacity-40 blur-[120px] sm:blur-[140px] md:blur-[160px] lg:blur-[180px]'></div>
 
       {/* Side gradients */}
       <div className='absolute top-0 left-0 bg-gradient-to-b from-black to-transparent w-full h-1/4'></div>
