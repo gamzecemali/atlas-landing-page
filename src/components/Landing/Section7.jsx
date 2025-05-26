@@ -165,8 +165,8 @@ const AnimatedClientCard = ({ clientPair, index, animationDelay }) => {
 
   return (
     <div 
-      className="relative w-[80px] h-[80px] sm:w-[95px] sm:h-[95px] md:w-[114px] md:h-[114px] flex justify-center items-center bg-transparent cursor-pointer transition-all duration-300 opacity-0 translate-y-5 animate-[fadeInUp_0.6s_ease_forwards] hover:-translate-y-1"
-      style={{ animationDelay: animationDelay }}
+      className="relative w-[80px] h-[80px] sm:w-[95px] sm:h-[95px] md:w-[114px] md:h-[114px] flex justify-center items-center bg-transparent !bg-none cursor-pointer transition-all duration-300 opacity-0 translate-y-5 animate-[fadeInUp_0.6s_ease_forwards] hover:-translate-y-1"
+      style={{ animationDelay: animationDelay, background: 'transparent' }}
     >
       <ClientFrame index={`card_${index}`} />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 flex justify-center items-center z-[2] transition-all duration-300 bg-gradient-radial from-white/15 via-white/8 to-white/2 backdrop-blur-sm hover:scale-105 hover:bg-gradient-radial hover:from-white/25 hover:via-white/15 hover:to-white/5 ">
@@ -216,7 +216,7 @@ const Section7 = () => {
   ]
 
   return (
-    <section className="w-full py-10 sm:py-14 md:py-16 lg:py-20 bg-black flex justify-center items-center">
+    <section className="w-full py-10 sm:py-14 md:py-16 lg:py-20 bg-black flex justify-center items-center" style={{ backgroundColor: '#000', background: '#000' }}>
       <div className="max-w-6xl w-full px-4 sm:px-5 flex flex-col items-center gap-8 sm:gap-10 md:gap-12 lg:gap-16">
         {/* Header */}
         <div className="flex flex-col items-center gap-2 w-full">
@@ -250,7 +250,7 @@ const Section7 = () => {
                 key={`row2_${index}`}
                 clientPair={clientPair}
                 index={index}
-                animationDelay={`${(index + 5) * 0.1}s`}
+                animationDelay={`${(index * 0.1) + 0.25}s`}
               />
             ))}
           </div>
