@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 // Import social media icons - using the complete/proper icons
 import linkedinIcon from '../assets/icons/social/linkedin.svg'  // Complete LinkedIn icon
@@ -9,6 +10,11 @@ import instagramIcon from '../assets/icons/social/instagram.svg'  //
 import glows from '../assets/images/glows.png'  //
 
 const Footer = () => {
+  // Function to handle navigation and scroll to top
+  const navigateAndScrollTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <footer className="bg-black bg-opacity-80 rounded-t-[50px] w-full mt-auto relative px-5">
 
@@ -21,34 +27,38 @@ const Footer = () => {
             Useful Links
           </h3>
           <nav className="text-nowrap flex flex-col sm:flex-row justify-start lg:justify-between items-center w-full gap-4 sm:gap-8 lg:gap-[86px]">
-            <a 
-              href="/" 
+            <Link 
+              to="/" 
               className="font-montserrat font-medium text-base sm:text-lg leading-[1.4] tracking-[-0.0139em] capitalize text-white text-center hover:opacity-80 transition-opacity duration-300"
               style={{ textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}
+              onClick={navigateAndScrollTop}
             >
               Home
-            </a>
-            <a 
-              href="/about-us" 
+            </Link>
+            <Link 
+              to="/about-us" 
               className="font-montserrat font-medium text-base sm:text-lg leading-[1.4] tracking-[-0.0139em] capitalize text-white text-center hover:opacity-80 transition-opacity duration-300"
               style={{ textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}
+              onClick={navigateAndScrollTop}
             >
               About Us
-            </a>
-            <a 
-              href="#" 
+            </Link>
+            <Link 
+              to="/services" 
               className="font-montserrat font-medium text-base sm:text-lg leading-[1.4] tracking-[-0.0139em] capitalize text-white text-center hover:opacity-80 transition-opacity duration-300"
               style={{ textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}
+              onClick={navigateAndScrollTop}
             >
               Services
-            </a>
-            <a 
-              href="/contact-us" 
+            </Link>
+            <Link 
+              to="/contact-us" 
               className="font-montserrat font-medium text-base sm:text-lg leading-[1.4] tracking-[-0.0139em] capitalize text-white text-center hover:opacity-80 transition-opacity duration-300"
               style={{ textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}
+              onClick={navigateAndScrollTop}
             >
               Contact
-            </a>
+            </Link>
           </nav>
         </div>
         

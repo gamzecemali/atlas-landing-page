@@ -35,14 +35,24 @@ const Section22 = () => {
   ]
 
   return (
-    <section className="bg-black text-white py-16 px-4 md:px-8 lg:px-32">
+    <section className="bg-black text-white py-24 px-4 md:px-8 lg:px-32">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal mb-6 bg-gradient-to-br from-white to-gray-300 bg-clip-text text-transparent tracking-wide">
-            Digital Twin
-          </h2>
-          <p className="text-xl md:text-2xl text-gray-400 font-semibold max-w-4xl mx-auto leading-relaxed tracking-tight">
+        <div className="text-center mb-20">
+          <div style={{ padding: '30px 0 10px' }}>
+            <h2 
+              className="text-4xl md:text-5xl lg:text-6xl font-normal bg-gradient-to-br from-white to-gray-300 bg-clip-text text-transparent tracking-wide inline-block" 
+              style={{ 
+                lineHeight: '1.4', 
+                marginBottom: '10px',
+                position: 'relative',
+                top: '-10px'
+              }}
+            >
+              Digital Twin
+            </h2>
+          </div>
+          <p className="text-xl md:text-2xl text-gray-400 font-semibold max-w-4xl mx-auto leading-relaxed tracking-tight mt-4">
             Geospatial digital twins provide unparalleled context and high-resolution data integration for better business decisions.
           </p>
         </div>

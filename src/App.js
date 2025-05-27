@@ -8,19 +8,22 @@ import Navbar from './components/Navbar';
 import Services from './components/Services';
 import ContactUsArea from './components/ContactUsArea';
 import Footer from './components/Footer';
+
 const App = () => {
     return (
         <div className='bg-black relative'>
-            <Navbar/>
             <Router>
-            <Routes>
-                <Route path="/" element={<Landing />} />
-                <Route path="/about" element={<AboutUs />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/contact" element={<ContactUsArea />} />
-            </Routes>
-        </Router>
-        <Footer/>
+                <Navbar/>
+                <Routes>
+                    <Route path="/" element={<Landing />} />
+                    <Route path="/about" element={<AboutUs />} />
+                    <Route path="/about-us" element={<AboutUs />} />
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/contact" element={<ContactUsArea />} />
+                    <Route path="/contact-us" element={<ContactUsArea />} />
+                </Routes>
+                <Footer/>
+            </Router>
         </div>
     );
 };

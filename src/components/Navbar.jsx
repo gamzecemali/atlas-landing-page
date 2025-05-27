@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../assets/images/twin.svg'
 import atlasSpaceIcon from '../assets/images/atlas-space-icon.svg'
 
@@ -9,23 +10,28 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  // Function to handle navigation and scroll to top
+  const navigateAndScrollTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <>
       <div className='fixed top-0 left-0 w-full h-24 bg-black/75 z-[9999999]'>
         <div className='h-full atlas-container hidden lg:grid lg:grid-cols-3 lg:items-center'>
           {/* Logo - Left */}
           <div className='flex justify-start'>
-            <a href='/' className=''>
+            <Link to='/' className='' onClick={navigateAndScrollTop}>
               <img src={logo} alt="" />
-            </a>
+            </Link>
           </div>
           
           {/* Navigation Links - Center */}
           <div className='flex flex-row items-center justify-center text-sm lg:text-base xl:text-lg 2xl:text-xl gap-3 lg:gap-4 xl:gap-6 2xl:gap-8'>
-            <a href='/' className='text-white border-2 border-transparent hover:border-b-white transition-all whitespace-nowrap'>HOME</a>
-            <a href='/about' className='text-white border-2 border-transparent hover:border-b-white transition-all whitespace-nowrap'>ABOUT US</a>
-            <a href='/services' className='text-white border-2 border-transparent hover:border-b-white transition-all whitespace-nowrap'>SERVICES</a>
-            <a href='/contact' className='text-white border-2 border-transparent hover:border-b-white transition-all whitespace-nowrap'>CONTACT</a>
+            <Link to='/' className='text-white border-2 border-transparent hover:border-b-white transition-all whitespace-nowrap' onClick={navigateAndScrollTop}>HOME</Link>
+            <Link to='/about-us' className='text-white border-2 border-transparent hover:border-b-white transition-all whitespace-nowrap' onClick={navigateAndScrollTop}>ABOUT US</Link>
+            <Link to='/services' className='text-white border-2 border-transparent hover:border-b-white transition-all whitespace-nowrap' onClick={navigateAndScrollTop}>SERVICES</Link>
+            <Link to='/contact-us' className='text-white border-2 border-transparent hover:border-b-white transition-all whitespace-nowrap' onClick={navigateAndScrollTop}>CONTACT</Link>
           </div>
 
           {/* Atlas Space Button - Right */}
@@ -47,9 +53,9 @@ const Navbar = () => {
         {/* Mobile Layout */}
         <div className='h-full atlas-container flex flex-row items-center justify-between lg:hidden'>
           {/* Logo */}
-          <a href='/' className=''>
+          <Link to='/' className='' onClick={navigateAndScrollTop}>
             <img src={logo} alt="" />
-          </a>
+          </Link>
 
           {/* Mobile Hamburger Button */}
           <button 
@@ -68,34 +74,46 @@ const Navbar = () => {
         isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
       }`}>
         <div className='flex flex-col items-center py-8 space-y-6'>
-          <a 
-            href='/' 
+          <Link 
+            to='/' 
             className='text-white text-xl border-2 border-transparent hover:border-b-white transition-all py-2'
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => {
+              setIsMenuOpen(false);
+              navigateAndScrollTop();
+            }}
           >
             HOME
-          </a>
-          <a 
-            href='/about' 
+          </Link>
+          <Link 
+            to='/about-us' 
             className='text-white text-xl border-2 border-transparent hover:border-b-white transition-all py-2'
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => {
+              setIsMenuOpen(false);
+              navigateAndScrollTop();
+            }}
           >
             ABOUT US
-          </a>
-          <a 
-            href='/services' 
+          </Link>
+          <Link 
+            to='/services' 
             className='text-white text-xl border-2 border-transparent hover:border-b-white transition-all py-2'
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => {
+              setIsMenuOpen(false);
+              navigateAndScrollTop();
+            }}
           >
             SERVICES
-          </a>
-          <a 
-            href='/contact' 
+          </Link>
+          <Link 
+            to='/contact-us' 
             className='text-white text-xl border-2 border-transparent hover:border-b-white transition-all py-2'
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => {
+              setIsMenuOpen(false);
+              navigateAndScrollTop();
+            }}
           >
             CONTACT
-          </a>
+          </Link>
           
           {/* Mobile Atlas Space Button */}
           <button className=' relative flex items-center gap-2 px-5 py-3 bg-[#111215] rounded border border-transparent hover:border-gradient-to-r hover:from-[#0AFFF0] hover:via-[#80B2EC] hover:via-[#C565D5] hover:to-[#F54FB3] transition-all duration-300 shadow-[0px_0px_20px_0px_rgba(79,207,233,0.5)] hover:shadow-[0px_0px_25px_0px_rgba(79,207,233,0.7)] mt-4'>
