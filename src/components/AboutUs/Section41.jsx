@@ -42,30 +42,30 @@ const Section41 = () => {
   };
 
   return (
-    <div className='relative min-h-[120vh] sm:min-h-[120vh] md:min-h-[120vh] lg:min-h-[120vh] w-full bg-black overflow-hidden pb-40 sm:pb-44 md:pb-48 lg:pb-52 mt-0 pt-0 mb-40 sm:mb-44 md:mb-48 lg:mb-52'>
+    <div className='relative min-h-screen w-full bg-black overflow-hidden pb-20 sm:pb-24 md:pb-28 lg:pb-32 pt-20 sm:pt-24 md:pt-28 lg:pt-32'>
       {/* Background with animated concentric circles */}
       <div className='absolute inset-0 flex items-center justify-center'>
         {/* Outermost circle layer */}
         <div 
-          className='absolute w-[320px] h-[320px] rounded-full border border-white/10 transition-all duration-75 ease-out'
+          className='absolute w-[280px] sm:w-[300px] md:w-[320px] rounded-full border border-white/10 transition-all duration-75 ease-out aspect-square'
           style={{ transform: getLayerTransform(0.3) }}
         />
         
         {/* Second circle layer */}
         <div 
-          className='absolute w-[264px] h-[264px] rounded-full border border-white/15 transition-all duration-75 ease-out'
+          className='absolute w-[230px] sm:w-[250px] md:w-[264px] rounded-full border border-white/15 transition-all duration-75 ease-out aspect-square'
           style={{ transform: getLayerTransform(0.5) }}
         />
         
         {/* Third circle layer */}
         <div 
-          className='absolute w-[290px] h-[290px] rounded-full border border-white/10 transition-all duration-75 ease-out'
+          className='absolute w-[250px] sm:w-[270px] md:w-[290px] rounded-full border border-white/10 transition-all duration-75 ease-out aspect-square'
           style={{ transform: getLayerTransform(0.7) }}
         />
         
         {/* Fourth circle layer with dashed border */}
         <div 
-          className='absolute w-[320px] h-[320px] rounded-full border border-white/8 border-dashed transition-all duration-75 ease-out'
+          className='absolute w-[280px] sm:w-[300px] md:w-[320px] rounded-full border border-white/8 border-dashed transition-all duration-75 ease-out aspect-square'
           style={{ 
             transform: getLayerTransform(0.9),
             borderDashArray: '1 300'
@@ -74,7 +74,7 @@ const Section41 = () => {
         
         {/* Fifth circle layer with orange dashed border */}
         <div 
-          className='absolute w-[290px] h-[290px] rounded-full border-2 border-orange-500/40 border-dashed transition-all duration-75 ease-out'
+          className='absolute w-[250px] sm:w-[270px] md:w-[290px] rounded-full border-2 border-orange-500/40 border-dashed transition-all duration-75 ease-out aspect-square'
           style={{ 
             transform: getLayerTransform(1.1),
             borderDashArray: '1 300'
@@ -83,7 +83,7 @@ const Section41 = () => {
         
         {/* Sixth circle layer with orange dashed border */}
         <div 
-          className='absolute w-[264px] h-[264px] rounded-full border-2 border-orange-500/40 border-dashed transition-all duration-75 ease-out'
+          className='absolute w-[230px] sm:w-[250px] md:w-[264px] rounded-full border-2 border-orange-500/40 border-dashed transition-all duration-75 ease-out aspect-square'
           style={{ 
             transform: getLayerTransform(1.3),
             borderDashArray: '1 300'
@@ -92,7 +92,7 @@ const Section41 = () => {
         
         {/* Seventh circle layer with orange solid border */}
         <div 
-          className='absolute w-[320px] h-[320px] rounded-full border-2 border-orange-500 transition-all duration-75 ease-out'
+          className='absolute w-[280px] sm:w-[300px] md:w-[320px] rounded-full border-2 border-orange-500 transition-all duration-75 ease-out aspect-square'
           style={{ 
             transform: getLayerTransform(1.5),
             borderDashArray: '1 300'
@@ -101,23 +101,23 @@ const Section41 = () => {
 
         {/* Animated sector elements around the circles */}
         <div 
-          className='absolute w-[380px] h-[380px] transition-all duration-75 ease-out'
+          className='absolute w-[340px] sm:w-[360px] md:w-[380px] transition-all duration-75 ease-out aspect-square'
           style={{ transform: getLayerTransform(0.8) }}
         >
           {/* Sector elements positioned around the circle */}
           {Array.from({ length: 8 }).map((_, index) => {
             const angle = (index * 45) - 90; // Start from top and go clockwise
-            const radius = 160;
+            const radius = 140; // Smaller radius for better fit
             const x = Math.cos(angle * Math.PI / 180) * radius;
             const y = Math.sin(angle * Math.PI / 180) * radius;
             
             return (
               <div
                 key={index}
-                className='absolute w-8 h-8 rounded-full border border-white/50'
+                className='absolute w-6 sm:w-7 md:w-8 aspect-square rounded-full border border-white/50'
                 style={{
-                  left: `calc(50% + ${x}px - 16px)`,
-                  top: `calc(50% + ${y}px - 16px)`,
+                  left: `calc(50% + ${x}px - 12px)`,
+                  top: `calc(50% + ${y}px - 12px)`,
                   transform: `rotate(${angle + 90}deg)`,
                 }}
               />
@@ -127,47 +127,47 @@ const Section41 = () => {
 
         {/* Fourth layer - smaller circles */}
         <div 
-          className='absolute w-[252px] h-[252px] transition-all duration-75 ease-out'
+          className='absolute w-[220px] sm:w-[240px] md:w-[252px] transition-all duration-75 ease-out aspect-square'
           style={{ transform: getLayerTransform(1.0) }}
         >
           <div className='relative w-full h-full'>
-            <div className='absolute top-4 left-4 w-[220px] h-[220px] rounded-full border-2 border-white/30 border-dashed'
+            <div className='absolute top-4 left-4 w-[calc(100%-32px)] aspect-square rounded-full border-2 border-white/30 border-dashed'
                  style={{ borderDashArray: '0.01 10' }} />
           </div>
         </div>
 
         {/* Third layer - orange dots */}
         <div 
-          className='absolute w-[124px] h-[124px] sm:w-[154px] sm:h-[154px] md:w-[180px] md:h-[180px] lg:w-[204px] lg:h-[204px] transition-all duration-75 ease-out'
+          className='absolute w-[124px] sm:w-[154px] md:w-[180px] lg:w-[204px] transition-all duration-75 ease-out aspect-square'
           style={{ transform: getLayerTransform(1.2) }}
         >
           <div className='relative w-full h-full'>
             {/* Three orange dots positioned around the circle */}
-            <div className='absolute top-0.5 left-0.5 w-[118px] h-[118px] sm:w-[148px] sm:h-[148px] md:w-[174px] md:h-[174px] lg:w-[196px] lg:h-[196px] bg-orange-500 rounded-full' />
-            <div className='absolute top-2 left-2 sm:top-3 sm:left-3 lg:top-4 lg:left-4 w-[118px] h-[118px] sm:w-[148px] sm:h-[148px] md:w-[174px] md:h-[174px] lg:w-[196px] lg:h-[196px] bg-orange-500 rounded-full opacity-80' />
-            <div className='absolute top-1 left-1 sm:top-1.5 sm:left-1.5 lg:top-2 lg:left-2 w-[114px] h-[114px] sm:w-[142px] sm:h-[142px] md:w-[166px] md:h-[166px] lg:w-[188px] lg:h-[188px] bg-orange-500 rounded-full opacity-60' />
+            <div className='absolute top-0.5 left-0.5 w-[calc(100%-4px)] aspect-square bg-orange-500 rounded-full' />
+            <div className='absolute top-2 left-2 sm:top-3 sm:left-3 lg:top-4 lg:left-4 w-[calc(100%-8px)] aspect-square bg-orange-500 rounded-full opacity-80' />
+            <div className='absolute top-1 left-1 sm:top-1.5 sm:left-1.5 lg:top-2 lg:left-2 w-[calc(100%-6px)] aspect-square bg-orange-500 rounded-full opacity-60' />
           </div>
         </div>
 
         {/* Second layer - white circles */}
         <div 
-          className='absolute w-[86px] h-[86px] sm:w-[108px] sm:h-[108px] md:w-[125px] md:h-[125px] lg:w-[142px] lg:h-[142px] transition-all duration-75 ease-out'
+          className='absolute w-[86px] sm:w-[108px] md:w-[125px] lg:w-[142px] transition-all duration-75 ease-out aspect-square'
           style={{ transform: getLayerTransform(1.4) }}
         >
           <div className='relative w-full h-full'>
             {/* Three white circles with different dash patterns */}
-            <div className='absolute top-0.5 left-0.5 w-[84px] h-[84px] sm:w-[106px] sm:h-[106px] md:w-[123px] md:h-[123px] lg:w-[140px] lg:h-[140px] rounded-full border-2 border-white'
+            <div className='absolute top-0.5 left-0.5 w-[calc(100%-4px)] aspect-square rounded-full border-2 border-white'
                  style={{ borderDashArray: '50 42' }} />
-            <div className='absolute top-1 left-1 w-[82px] h-[82px] sm:w-[104px] sm:h-[104px] md:w-[121px] md:h-[121px] lg:w-[136px] lg:h-[136px] rounded-full border-2 border-white'
+            <div className='absolute top-1 left-1 w-[calc(100%-8px)] aspect-square rounded-full border-2 border-white'
                  style={{ borderDashArray: '27 27' }} />
-            <div className='absolute top-1.5 left-1.5 w-[80px] h-[80px] sm:w-[102px] sm:h-[102px] md:w-[119px] md:h-[119px] lg:w-[132px] lg:h-[132px] rounded-full border-2 border-white'
+            <div className='absolute top-1.5 left-1.5 w-[calc(100%-12px)] aspect-square rounded-full border-2 border-white'
                  style={{ borderDashArray: '40 14' }} />
           </div>
         </div>
 
         {/* Center icon with enhanced mouse follow animation - RESPONSIVE FIGMA MATCH */}
         <div 
-          className='absolute w-[54px] h-[54px] sm:w-[68px] sm:h-[68px] md:w-[78px] md:h-[78px] lg:w-[90px] lg:h-[90px] transition-all duration-100 ease-out'
+          className='absolute w-[54px] sm:w-[68px] md:w-[78px] lg:w-[90px] transition-all duration-100 ease-out aspect-square'
           style={{ transform: getCenterIconTransform(2.5, 1.5) }}
         >
           {/* Exact Figma Layer 1 recreation - Responsive */}
@@ -285,11 +285,11 @@ const Section41 = () => {
       </div>
 
       {/* Static content cards on the sides - RESPONSIVE LAYOUT */}
-      <div className='absolute inset-0 flex flex-col xl:flex-row xl:items-center xl:justify-between px-4 sm:px-8 md:px-16 lg:px-20 xl:px-[60px] 2xl:px-[80px] 3xl:px-[120px] py-8 xl:py-0 mt-20 sm:mt-24 md:mt-28 lg:mt-32 mb-40 sm:mb-44 md:mb-48 lg:mb-52'>
+      <div className='absolute inset-0 flex flex-col md:flex-row md:items-center md:justify-between px-4 sm:px-8 md:px-12 lg:px-16 xl:px-[60px] 2xl:px-[80px] 3xl:px-[120px] py-8 md:py-0'>
         {/* Left side cards */}
-        <div className='flex flex-col gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-[120px] 2xl:gap-[157px] mb-8 xl:mb-0'>
+        <div className='flex flex-col gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-[120px] 2xl:gap-[157px] mb-8 md:mb-0'>
           <div 
-            className='w-full max-w-[384px] lg:max-w-[420px] xl:max-w-[384px] h-auto min-h-[200px] sm:min-h-[230px] lg:h-[266px] rounded-xl p-4 sm:p-5 lg:p-6 relative mx-auto xl:mx-0'
+            className='w-full max-w-[320px] sm:max-w-[350px] md:max-w-[280px] lg:max-w-[320px] xl:max-w-[384px] h-auto min-h-[180px] sm:min-h-[200px] md:min-h-[220px] lg:min-h-[240px] rounded-xl p-4 sm:p-5 lg:p-6 relative mx-auto md:mx-0'
             style={{
               background: '#0C0C0F',
               border: '1px solid transparent',
@@ -327,7 +327,7 @@ const Section41 = () => {
           </div>
           
           <div 
-            className='w-full max-w-[384px] lg:max-w-[420px] xl:max-w-[384px] h-auto min-h-[200px] sm:min-h-[230px] lg:h-[266px] rounded-xl p-4 sm:p-5 lg:p-6 relative mx-auto xl:mx-0'
+            className='w-full max-w-[320px] sm:max-w-[350px] md:max-w-[280px] lg:max-w-[320px] xl:max-w-[384px] h-auto min-h-[180px] sm:min-h-[200px] md:min-h-[220px] lg:min-h-[240px] rounded-xl p-4 sm:p-5 lg:p-6 relative mx-auto md:mx-0'
             style={{
               background: '#0C0C0F',
               border: '1px solid transparent',
@@ -368,7 +368,7 @@ const Section41 = () => {
         {/* Right side cards */}
         <div className='flex flex-col gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-[120px] 2xl:gap-[157px]'>
           <div 
-            className='w-full max-w-[384px] lg:max-w-[420px] xl:max-w-[384px] h-auto min-h-[200px] sm:min-h-[230px] lg:h-[266px] rounded-xl p-4 sm:p-5 lg:p-6 relative mx-auto xl:mx-0'
+            className='w-full max-w-[320px] sm:max-w-[350px] md:max-w-[280px] lg:max-w-[320px] xl:max-w-[384px] h-auto min-h-[180px] sm:min-h-[200px] md:min-h-[220px] lg:min-h-[240px] rounded-xl p-4 sm:p-5 lg:p-6 relative mx-auto md:mx-0'
             style={{
               background: '#0C0C0F',
               border: '1px solid transparent',
@@ -406,7 +406,7 @@ const Section41 = () => {
           </div>
           
           <div 
-            className='w-full max-w-[384px] lg:max-w-[420px] xl:max-w-[384px] h-auto min-h-[200px] sm:min-h-[230px] lg:h-[266px] rounded-xl p-4 sm:p-5 lg:p-6 relative mx-auto xl:mx-0'
+            className='w-full max-w-[320px] sm:max-w-[350px] md:max-w-[280px] lg:max-w-[320px] xl:max-w-[384px] h-auto min-h-[180px] sm:min-h-[200px] md:min-h-[220px] lg:min-h-[240px] rounded-xl p-4 sm:p-5 lg:p-6 relative mx-auto md:mx-0'
             style={{
               background: '#0C0C0F',
               border: '1px solid transparent',
