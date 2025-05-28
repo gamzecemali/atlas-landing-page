@@ -20,7 +20,7 @@ const Section6 = () => {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center gap-6 max-w-6xl px-4 sm:px-8 md:px-16 lg:px-32 text-center py-16">
         <h2 className="font-geometos font-normal text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-[0.15em] text-white">
-          Digital Twin
+          DIGITAL TWIN
         </h2>
         <p className="font-roboto font-semibold text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed tracking-tight text-white max-w-4xl">
           Geospatial digital twins provide unparalleled context and high-resolution data integration for better business decisions.

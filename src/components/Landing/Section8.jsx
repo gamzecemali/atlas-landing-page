@@ -37,7 +37,7 @@ const Section8 = () => {
   return (
     <div className="flex flex-col items-center gap-9 py-16 px-5 bg-black text-white w-full overflow-hidden">
       <div className="flex flex-col items-center gap-4 text-center">
-        <h2 className="section8-title text-5xl font-normal leading-tight tracking-[0.15em] text-center bg-gradient-to-br from-white to-gray-300 bg-clip-text text-transparent  max-w-3xl m-0">
+        <h2 className="section8-title text-5xl font-medium leading-tight tracking-[0.15em] text-center bg-gradient-to-br from-white to-gray-300 bg-clip-text text-transparent  max-w-3xl m-0">
           OUR INVESTORS
         </h2>
         <p className="text-lg font-semibold leading-tight text-gray-300 text-center m-0">

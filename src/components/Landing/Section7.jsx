@@ -232,7 +232,7 @@ const Section7 = () => {
         <div className="max-w-6xl w-full px-4 sm:px-5 flex flex-col items-center gap-8 sm:gap-10 md:gap-12 lg:gap-16" style={{backgroundColor: '#000000', background: '#000000'}}>
           {/* Header */}
           <div className="flex flex-col items-center gap-2 w-full">
-            <h2 className="font-normal text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-[1.1] tracking-wide sm:tracking-wider md:tracking-[0.15em] text-center m-0 bg-gradient-to-br from-white via-white to-gray-300 bg-clip-text text-transparent">
+            <h2 className="font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-[1.1] tracking-wide sm:tracking-wider md:tracking-[0.15em] text-center m-0 bg-gradient-to-br from-white via-white to-gray-300 bg-clip-text text-transparent">
               OUR CLIENTS & PARTNERS
             </h2>
             <p className="font-['Inter'] font-semibold text-xs sm:text-sm md:text-base lg:text-lg leading-[1.21] text-center text-gray-300 m-0">

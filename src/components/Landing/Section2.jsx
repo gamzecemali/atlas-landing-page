@@ -37,8 +37,8 @@ const Section2 = () => {
       <div className='absolute top-0 left-[5%] bg-gradient-to-r from-black to-transparent w-1/4 h-full'></div>
       <div className='absolute top-0 right-[5%] bg-gradient-to-l from-black to-transparent w-1/4 h-full'></div>
       <div className='absolute gap-12 top-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent flex flex-col items-center justify-end p-24'>
-        <div className='text-5xl text-center text-white font-bold geometos'>WE ARE ATLAS TWIN</div>
-        <div className='text-sm text-center text-white roboto'>What would you do if you had a copy of yourself? A digital presentation, identical to you in every way, in an accurate digital rendering of your home, workplace, neighborhood, or city? Even better: What if the digital version of you—your digital twin—was impervious to injury, pain, or embarrassment? The mind boggles at the possibilities. Suffice it to say, you'd probably be able to make decisions for yourself with a lot more certainty of the outcome.</div>
+        <div className='text-center text-white' style={{ fontFamily: 'Geometos', fontWeight: 400, fontSize: '56px', lineHeight: '110%', letterSpacing: '0.15em' }}>WE ARE ATLAS TWIN</div>
+        <div style={{ fontFamily: 'Roboto', fontWeight: 600, fontSize: '18px', lineHeight: '160%', letterSpacing: '0.11px', color: '#FFFFFF', opacity: 1 }} className='text-center'>What would you do if you had a copy of yourself? A digital presentation, identical to you in every way, in an accurate digital rendering of your home, workplace, neighborhood, or city? Even better: What if the digital version of you—your digital twin—was impervious to injury, pain, or embarrassment? The mind boggles at the possibilities. Suffice it to say, you'd probably be able to make decisions for yourself with a lot more certainty of the outcome.</div>
       </div>
     </div>
   )
