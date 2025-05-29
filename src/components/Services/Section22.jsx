@@ -71,26 +71,6 @@ const Section22 = () => {
                 backgroundClip: 'padding-box, border-box'
               }}
             >
-              {/* Corner SVG */}
-              <div className="absolute bottom-0 right-0">
-                <svg width="173" height="140" viewBox="0 0 173 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g filter="url(#filter0_d_12303_27881)">
-                    <path d="M60 61H112V79.54" stroke="white" strokeMiterlimit="10" shapeRendering="crispEdges"/>
-                  </g>
-                  <defs>
-                    <filter id="filter0_d_12303_27881" x="0" y="0.5" width="172.5" height="139.04" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                      <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                      <feOffset/>
-                      <feGaussianBlur stdDeviation="30"/>
-                      <feComposite in2="hardAlpha" operator="out"/>
-                      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
-                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_12303_27881"/>
-                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_12303_27881" result="shape"/>
-                    </filter>
-                  </defs>
-                </svg>
-              </div>
               {/* Icon */}
               <div className="w-10 h-10 mb-4">
                 <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
