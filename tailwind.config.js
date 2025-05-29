@@ -7,9 +7,11 @@ module.exports = {
     extend: {
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif'],
-        'inter': ['Inter', 'sans-serif'],
+        'inter': ['Inter Variable', 'sans-serif'], // Buradaki isim, @font-face'teki isimle aynı olmalı
+        'geometos': ['Geometos', 'sans-serif'], // Yeni eklenen
+        'roboto': ['Roboto Variable', 'sans-serif'], // Yeni eklenen
       },
     },
   },
   plugins: [],
-} 
+}

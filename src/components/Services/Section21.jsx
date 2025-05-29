@@ -63,12 +63,12 @@ const Section21 = () => {
           <div className="absolute bottom-0 left-0 w-[30px] sm:w-[40px] md:w-[46px] lg:w-[52px] h-[12px] sm:h-[14px] md:h-[16px] lg:h-[18.54px] border-b border-l border-white shadow-[0_0_60px_0_rgba(0,0,0,1)]"></div>
           <div className="absolute bottom-0 right-0 w-[30px] sm:w-[40px] md:w-[46px] lg:w-[52px] h-[12px] sm:h-[14px] md:h-[16px] lg:h-[18.54px] border-b border-r border-white shadow-[0_0_60px_0_rgba(0,0,0,1)]"></div>
           
-          <h2 className="font-geometos font-normal text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight tracking-[0.15em] text-center bg-gradient-to-br from-white to-[#DDDDDD] bg-clip-text text-transparent m-0 relative z-10">
+          <h2 className="font-['Geometos',sans-serif] font-normal text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight tracking-[0.15em] text-center bg-gradient-to-br from-white to-[#DDDDDD] bg-clip-text text-transparent m-0 relative z-10">
             WHAT WE DO
           </h2>
         </div>
         
-        <p className="font-inter font-normal text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed text-center text-[#E8E8E8] drop-shadow-[0_5.23px_5.23px_rgba(0,0,0,0.25)] m-0 max-w-[280px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[800px]">
+        <p className="font-['Inter',sans-serif] font-normal text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed text-center text-[#E8E8E8] drop-shadow-[0_5.23px_5.23px_rgba(0,0,0,0.25)] m-0 max-w-[280px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[800px]">
           Geospatial digital twins provide unparalleled context and high-resolution data integration for better business decisions.
         </p>
       </div>
@@ -96,11 +96,11 @@ const Section21 = () => {
                   <div className="w-6 h-6 flex items-center justify-center">
                     <div className="w-2 h-2 bg-[#18FEFE] rounded-sm"></div>
                   </div>
-                  <span className="font-roboto font-normal text-sm sm:text-base leading-tight tracking-[-0.005em] text-white">
+                  <span className="font-['Inter',sans-serif] font-normal text-sm sm:text-base leading-tight tracking-[-0.005em] text-white">
                     {service.id}
                   </span>
                 </div>
-                <h3 className="font-geometos font-normal text-xl sm:text-2xl md:text-3xl lg:text-[40px] leading-tight tracking-[-0.005em] text-white m-0">
+                <h3 className="font-['Geometos',sans-serif] font-normal text-xl sm:text-2xl md:text-3xl lg:text-[40px] leading-tight tracking-[-0.005em] text-white m-0">
                   {service.title}
                 </h3>
               </div>
@@ -125,7 +125,7 @@ const Section21 = () => {
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
-                <p className="font-inter font-normal text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed text-[#E8E8E8] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] m-0 text-left">
+                <p className="font-['Inter',sans-serif] font-normal text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed text-[#E8E8E8] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] m-0 text-left">
                   {service.content}
                 </p>
               </div>

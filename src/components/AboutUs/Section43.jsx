@@ -7,28 +7,28 @@ const Section43 = () => {
   const cardData = [
     {
       title: "Visualize comprehensive data",
-      description: "A digital twin is a virtual representation of reality, including physical objects, processes, and relationships. When built on a foundation of geography, it becomes a geospatial digital twin.",
+      description: "A digital twin is a virtual representation of reality, including physical objects, processes, and relationships. When built on a foundation of geography, it becomes a geospatial digital twin.A digital twin is a virtual representation of reality, including physical objects, processes, and relationships. When built on a foundation of geography, it becomes a geospatial digital twin.A digital twin is a virtual representation of reality, including physical objects, processes, and relationships. When built on a foundation of geography, it becomes a geospatial digital twin.A digital twin is a virtual representation of reality, including physical objects, processes, and relationships. When built on a foundation of geography, it becomes a geospatial digital twin.",
       image: digitalTwinAR,
       imageAlt: "Futuristic augmented reality visualization",
       position: "left"
     },
     {
       title: "Visualize comprehensive data", 
-      description: "A digital twin is a virtual representation of reality, including physical objects, processes, and relationships. When built on a foundation of geography, it becomes a geospatial digital twin.",
+      description: "A digital twin is a virtual representation of reality, including physical objects, processes, and relationships. When built on a foundation of geography, it becomes a geospatial digital twin.A digital twin is a virtual representation of reality, including physical objects, processes, and relationships. When built on a foundation of geography, it becomes a geospatial digital twin.A digital twin is a virtual representation of reality, including physical objects, processes, and relationships. When built on a foundation of geography, it becomes a geospatial digital twin.A digital twin is a virtual representation of reality, including physical objects, processes, and relationships. When built on a foundation of geography, it becomes a geospatial digital twin.",
       image: digitalTwinCity,
       imageAlt: "Digital city visualization",
       position: "right"
     },
     {
       title: "Visualize comprehensive data",
-      description: "A digital twin is a virtual representation of reality, including physical objects, processes, and relationships. When built on a foundation of geography, it becomes a geospatial digital twin.",
+      description: "A digital twin is a virtual representation of reality, including physical objects, processes, and relationships. When built on a foundation of geography, it becomes a geospatial digital twin.A digital twin is a virtual representation of reality, including physical objects, processes, and relationships. When built on a foundation of geography, it becomes a geospatial digital twin.A digital twin is a virtual representation of reality, including physical objects, processes, and relationships. When built on a foundation of geography, it becomes a geospatial digital twin.A digital twin is a virtual representation of reality, including physical objects, processes, and relationships. When built on a foundation of geography, it becomes a geospatial digital twin.",
       image: digitalTwinCity,
       imageAlt: "Digital city visualization", 
       position: "left"
     },
     {
       title: "Visualize comprehensive data",
-      description: "A digital twin is a virtual representation of reality, including physical objects, processes, and relationships. When built on a foundation of geography, it becomes a geospatial digital twin.",
+      description: "A digital twin is a virtual representation of reality, including physical objects, processes, and relationships. When built on a foundation of geography, it becomes a geospatial digital twin.A digital twin is a virtual representation of reality, including physical objects, processes, and relationships. When built on a foundation of geography, it becomes a geospatial digital twin.A digital twin is a virtual representation of reality, including physical objects, processes, and relationships. When built on a foundation of geography, it becomes a geospatial digital twin.A digital twin is a virtual representation of reality, including physical objects, processes, and relationships. When built on a foundation of geography, it becomes a geospatial digital twin.",
       image: digitalTwinCity,
       imageAlt: "Digital city visualization",
       position: "right"
@@ -46,15 +46,13 @@ const Section43 = () => {
       {/* Header Section */}
       <div className="flex flex-col items-center justify-center gap-3 sm:gap-4 md:gap-6 w-full">
         <h2 
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal leading-[1.1] tracking-[0.15em] text-center text-transparent bg-gradient-to-br from-white to-[#DDDDDD] bg-clip-text"
-          style={{ fontFamily: 'Geometos, sans-serif' }}
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal leading-[1.1] tracking-[0.15em] text-center text-transparent bg-gradient-to-br from-white to-[#DDDDDD] bg-clip-text font-['Geometos',sans-serif]"
         >
           Digital Twin
         </h2>
         <p 
-          className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-semibold leading-[1.6] tracking-[-0.02083em] text-center text-[#A3A3A3] max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl px-4 sm:px-0"
+          className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-semibold leading-[1.6] tracking-[-0.02083em] text-center text-[#A3A3A3] max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl px-4 sm:px-0 font-sans"
           style={{ 
-            fontFamily: 'Roboto, sans-serif',
             textShadow: '0px 5.23px 5.23px rgba(0, 0, 0, 0.25)'
           }}
         >

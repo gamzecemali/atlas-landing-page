@@ -5,7 +5,7 @@ import './Section7.css'
 import awsLogo from '../../assets/clients/aws.png'
 import bbhLogo from '../../assets/clients/bbh.png'
 import denizbankLogo from '../../assets/clients/denizbank.png'
-import oculusLogo from '../../assets/clients/oculus.png'
+import oculusLogo from '../../assets/clients/oculus1.png'
 import pepsiLogo from '../../assets/clients/pepsi.png'
 import polygonLogo from '../../assets/clients/polygon.png'
 import rpmLogo from '../../assets/clients/rpm.png'
@@ -152,22 +152,22 @@ const ClientFrame = ({ index }) => (
 )
 
 // Animated Client Card Component
-const AnimatedClientCard = ({ clientPair, index, animationDelay }) => {
+const AnimatedClientCard = ({ clientPair, index }) => {
   const [currentLogo, setCurrentLogo] = useState(0) // 0 for primary, 1 for secondary
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentLogo(prev => prev === 0 ? 1 : 0)
-    }, 3000 + (index * 200)) // Stagger the animations
+    }, 3000) // Remove index-based delay for synchronized animation
 
     return () => clearInterval(interval)
-  }, [index])
+  }, [])
 
   return (
     <div 
       className="client-card-container relative w-[80px] h-[80px] sm:w-[95px] sm:h-[95px] md:w-[114px] md:h-[114px] flex justify-center items-center opacity-0 translate-y-5 animate-[fadeInUp_0.6s_ease_forwards] hover:-translate-y-1"
       style={{ 
-        animationDelay: animationDelay, 
+        animationDelay: `${Math.floor(index / 2) * 0.1}s`, // Adjust animation delay based on row position
         backgroundColor: 'transparent', 
         background: 'transparent',
         backgroundImage: 'none'
@@ -232,7 +232,7 @@ const Section7 = () => {
         <div className="max-w-6xl w-full px-4 sm:px-5 flex flex-col items-center gap-8 sm:gap-10 md:gap-12 lg:gap-16" style={{backgroundColor: '#000000', background: '#000000'}}>
           {/* Header */}
           <div className="flex flex-col items-center gap-2 w-full">
-            <h2 className="font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-[1.1] tracking-wide sm:tracking-wider md:tracking-[0.15em] text-center m-0 bg-gradient-to-br from-white via-white to-gray-300 bg-clip-text text-transparent">
+            <h2 className="font-geometos font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-[1.1] tracking-wide sm:tracking-wider md:tracking-[0.15em] text-center m-0 bg-gradient-to-br from-white via-white to-gray-300 bg-clip-text text-transparent">
               OUR CLIENTS & PARTNERS
             </h2>
             <p className="font-['Inter'] font-semibold text-xs sm:text-sm md:text-base lg:text-lg leading-[1.21] text-center text-gray-300 m-0">
@@ -242,27 +242,23 @@ const Section7 = () => {
           </div>
 
           {/* Client Logos */}
-          <div className="flex flex-col items-center gap-6 sm:gap-7 md:gap-8 lg:gap-9 w-full" style={{backgroundColor: '#000000', background: '#000000'}}>
-            {/* First Row */}
-            <div className="flex justify-center items-center flex-wrap gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 w-full" style={{backgroundColor: '#000000', background: '#000000'}}>
+          <div className="flex flex-col items-center gap-4 sm:gap-5 md:gap-6 lg:gap-7 w-full" style={{backgroundColor: '#000000', background: '#000000'}}>
+            {/* Combined grid for all logos */}
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-y-4 sm:gap-y-5 md:gap-y-6 lg:gap-y-7 gap-x-0.5 sm:gap-x-1 md:gap-x-1.5 w-full justify-items-center" style={{backgroundColor: '#000000', background: '#000000'}}>
+              {/* First Row */}
               {clientsRow1.map((clientPair, index) => (
                 <AnimatedClientCard 
                   key={`row1_${index}`}
                   clientPair={clientPair}
                   index={index}
-                  animationDelay={`${index * 0.1}s`}
                 />
               ))}
-            </div>
-
-            {/* Second Row */}
-            <div className="flex justify-center items-center flex-wrap gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 w-full" style={{backgroundColor: '#000000', background: '#000000'}}>
+              {/* Second Row */}
               {clientsRow2.map((clientPair, index) => (
                 <AnimatedClientCard 
                   key={`row2_${index}`}
                   clientPair={clientPair}
-                  index={index}
-                  animationDelay={`${(index * 0.1) + 0.25}s`}
+                  index={index + 5}
                 />
               ))}
             </div>

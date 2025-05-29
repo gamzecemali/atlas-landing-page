@@ -7,7 +7,7 @@
   align-items: center;
   padding: 20px;
   padding-top: 100px;
-  font-family: 'Inter', sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
 .contact-container {
@@ -24,7 +24,7 @@
 }
 
 .main-title {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Geometos', sans-serif;
   font-weight: 400;
   font-size: 48px;
   line-height: 1.35;
@@ -67,7 +67,7 @@
 }
 
 .form-heading h2 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Geometos', sans-serif;
   font-weight: 400;
   font-size: 28px;
   line-height: 1.43;
@@ -107,7 +107,7 @@
   background: transparent;
   border: none;
   outline: none;
-  font-family: 'Inter', sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 1.21;
@@ -171,7 +171,7 @@
 }
 
 .checkbox-container label {
-  font-family: 'Inter', sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.21;
@@ -213,7 +213,7 @@
 }
 
 .submit-button span {
-  font-family: 'Inter', sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
   font-weight: 500;
   font-size: 15px;
   line-height: 1.21;

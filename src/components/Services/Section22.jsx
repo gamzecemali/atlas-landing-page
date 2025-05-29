@@ -41,7 +41,7 @@ const Section22 = () => {
         <div className="text-center mb-20">
           <div style={{ padding: '30px 0 10px' }}>
             <h2 
-              className="text-4xl md:text-5xl lg:text-6xl font-normal bg-gradient-to-br from-white to-gray-300 bg-clip-text text-transparent tracking-wide inline-block" 
+              className="text-4xl md:text-5xl lg:text-6xl font-normal bg-gradient-to-br from-white to-gray-300 bg-clip-text text-transparent tracking-wide inline-block font-['Geometos',sans-serif]" 
               style={{ 
                 lineHeight: '1.4', 
                 marginBottom: '10px',
@@ -49,10 +49,10 @@ const Section22 = () => {
                 top: '-10px'
               }}
             >
-              Digital Twin
+              DIGITAL TWIN
             </h2>
           </div>
-          <p className="text-xl md:text-2xl text-gray-400 font-semibold max-w-4xl mx-auto leading-relaxed tracking-tight mt-4">
+          <p className="text-xl md:text-2xl text-gray-400 font-semibold max-w-4xl mx-auto leading-relaxed tracking-tight mt-4 font-sans">
             Geospatial digital twins provide unparalleled context and high-resolution data integration for better business decisions.
           </p>
         </div>
@@ -101,10 +101,10 @@ const Section22 = () => {
 
               {/* Content */}
               <div className="space-y-4">
-                <h3 className="text-lg font-normal bg-gradient-to-br from-white to-gray-300 bg-clip-text text-transparent tracking-wide leading-relaxed">
+                <h3 className="text-lg font-normal bg-gradient-to-br from-white to-gray-300 bg-clip-text text-transparent tracking-wide leading-relaxed font-['Geometos',sans-serif]">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-[#A3A3A3] leading-relaxed tracking-tight" style={{ textShadow: '0px 5px 5px rgba(0, 0, 0, 0.25)' }}>
+                <p className="text-sm text-[#A3A3A3] leading-relaxed tracking-tight font-sans" style={{ textShadow: '0px 5px 5px rgba(0, 0, 0, 0.25)' }}>
                   {feature.description}
                 </p>
               </div>

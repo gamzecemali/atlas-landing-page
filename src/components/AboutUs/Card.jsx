@@ -26,16 +26,14 @@ const Card = ({
       <div className={`flex-1 flex flex-col justify-center gap-3 sm:gap-4 py-4 sm:py-6 items-center lg:items-start text-center lg:text-left ${!isLeft ? 'lg:items-end lg:text-right' : ''}`}>
         <div className="flex flex-col gap-4 sm:gap-6">
           <h3 
-            className={`text-lg sm:text-xl md:text-2xl font-normal leading-[1.6] tracking-[0.15em] text-transparent bg-gradient-to-br from-white to-[#DDDDDD] bg-clip-text text-center lg:text-left ${!isLeft ? 'lg:text-right' : ''}`}
-            style={{ fontFamily: 'Geometos, sans-serif' }}
+            className={`text-lg sm:text-xl md:text-2xl font-normal leading-[1.6] tracking-[0.15em] text-transparent bg-gradient-to-br from-white to-[#DDDDDD] bg-clip-text text-center lg:text-left ${!isLeft ? 'lg:text-right' : ''} font-['Geometos',sans-serif]`}
           >
             {title}
           </h3>
         </div>
         <p 
-          className={`text-sm sm:text-base font-normal leading-[1.6] tracking-[-0.03125em] text-[#A3A3A3] text-center lg:text-left ${!isLeft ? 'lg:text-right' : ''}`}
+          className={`text-sm sm:text-base font-normal leading-[1.6] tracking-[-0.03125em] text-[#A3A3A3] text-center lg:text-left ${!isLeft ? 'lg:text-right' : ''} font-sans`}
           style={{ 
-            fontFamily: 'Roboto, sans-serif',
             textShadow: '0px 5.23px 5.23px rgba(0, 0, 0, 0.25)'
           }}
         >

@@ -29,7 +29,7 @@ const Section5 = () => {
     <div className="bg-black py-16 md:py-24 lg:py-32 flex flex-col items-center gap-8 md:gap-12 lg:gap-16 relative">
       {/* Header Section */}
       <div className="flex flex-col items-center gap-4 md:gap-6 max-w-7xl w-full px-4 sm:px-6 lg:px-8">
-        <h1 className="font-montserrat text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-widest text-center m-0 bg-gradient-to-br from-white to-gray-300 bg-clip-text text-transparent uppercase">
+        <h1 className="font-geometos text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-widest text-center m-0 bg-gradient-to-br from-white to-gray-300 bg-clip-text text-transparent uppercase">
           GAIN EXCEPTIONAL CLARITY
         </h1>
         <p className="font-inter text-base sm:text-lg font-semibold leading-relaxed text-center text-gray-300 m-0 max-w-6xl">
@@ -53,10 +53,10 @@ const Section5 = () => {
               
               {/* Text Content */}
               <div className="flex flex-col items-center gap-4 sm:gap-6 flex-1 w-full py-2 sm:py-3">
-                <h3 className="font-montserrat text-xl sm:text-2xl font-semibold leading-relaxed tracking-wider text-center m-0 bg-gradient-to-br from-white to-gray-300 bg-clip-text text-transparent whitespace-pre-line uppercase">
+                <h3 className="font-geometos text-xl sm:text-2xl font-semibold leading-relaxed tracking-wider text-center m-0 bg-gradient-to-br from-white to-gray-300 bg-clip-text text-transparent whitespace-pre-line uppercase">
                   {card.title}
                 </h3>
-                <p className="font-roboto text-xs sm:text-sm font-normal leading-relaxed tracking-tight text-center text-gray-400 m-0 drop-shadow-lg">
+                <p className="text-xs sm:text-sm font-normal leading-relaxed tracking-tight text-center text-gray-400 m-0 drop-shadow-lg">
                   {card.description}
                 </p>
               </div>

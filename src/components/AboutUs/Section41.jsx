@@ -59,7 +59,7 @@ const Section41 = () => {
         </div>
         <div className='flex-1'>
           <h3 
-            className='text-sm xs:text-base sm:text-lg font-normal leading-relaxed tracking-[0.12em] xs:tracking-[0.15em] mb-2 xs:mb-3 sm:mb-5 lg:mb-6 font-["Geometos",sans-serif]'
+            className='font-["Geometos",sans-serif] text-sm xs:text-base sm:text-lg font-normal leading-relaxed tracking-[0.12em] xs:tracking-[0.15em] mb-2 xs:mb-3 sm:mb-5 lg:mb-6'
             style={{
               background: 'linear-gradient(135deg, #FFFFFF 10.93%, #DDDDDD 97.22%)',
               WebkitBackgroundClip: 'text',
@@ -70,7 +70,7 @@ const Section41 = () => {
             Visualize comprehensive data
           </h3>
           <p 
-            className='text-[#A3A3A3] text-[10px] xs:text-xs sm:text-sm font-normal leading-relaxed tracking-tight'
+            className='text-[#A3A3A3] text-[10px] xs:text-xs sm:text-sm font-normal leading-relaxed tracking-tight font-sans'
             style={{
               textShadow: '0px 5.23px 5.23px rgba(0, 0, 0, 0.25)'
             }}

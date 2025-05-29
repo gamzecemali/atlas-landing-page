@@ -36,11 +36,11 @@ const Section42 = () => {
   ]
 
   return (
-    <div className="flex flex-col items-stretch gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-8 md:px-16 lg:px-20 xl:px-[80px] 2xl:px-[120px] pt-0 md:pt-0 lg:pt-0 pb-8 sm:pb-16 md:pb-20 lg:pb-[120px] mt-0">
+    <div className="flex flex-col items-stretch gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-8 md:px-16 lg:px-20 xl:px-[80px] 2xl:px-[120px] pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-8 sm:pb-16 md:pb-20 lg:pb-[120px] mt-0">
       {/* Header Section */}
       <div className="flex flex-col justify-center items-center gap-3 sm:gap-4 md:gap-6">
         <h2 
-          className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal leading-[1.1] tracking-[0.15em]"
+          className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal leading-[1.1] tracking-[0.15em] font-['Geometos',sans-serif]"
           style={{
             background: 'linear-gradient(135deg, #FFFFFF 10.93%, #DDDDDD 97.22%)',
             WebkitBackgroundClip: 'text',
@@ -51,9 +51,8 @@ const Section42 = () => {
           WHY ATLAS TWIN?
         </h2>
         <p 
-          className="text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-semibold leading-[1.6] tracking-[-0.02083em] text-[#A3A3A3] max-w-4xl"
+          className="text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-semibold leading-[1.6] tracking-[-0.02083em] text-[#A3A3A3] max-w-4xl font-sans"
           style={{
-            fontFamily: 'Roboto',
             textShadow: '0px 5.23px 5.23px rgba(0, 0, 0, 0.25)'
           }}
         >
@@ -87,7 +86,7 @@ const Section42 = () => {
               {/* Title Frame */}
               <div className="flex flex-col justify-center self-stretch gap-4 sm:gap-5 lg:gap-6">
                 <h3 
-                  className="text-left text-base sm:text-lg font-normal leading-[1.6] tracking-[0.15em]"
+                  className="text-left text-base sm:text-lg font-normal leading-[1.6] tracking-[0.15em] font-['Geometos',sans-serif]"
                   style={{
                     background: 'linear-gradient(135deg, #FFFFFF 10.93%, #DDDDDD 97.22%)',
                     WebkitBackgroundClip: 'text',
@@ -101,7 +100,7 @@ const Section42 = () => {
               
               {/* Description */}
               <p 
-                className="text-left text-xs sm:text-sm font-normal leading-[1.6] tracking-[-0.03571em] text-[#A3A3A3] self-stretch"
+                className="text-left text-xs sm:text-sm font-normal leading-[1.6] tracking-[-0.03571em] text-[#A3A3A3] self-stretch font-sans"
                 style={{
                   textShadow: '0px 5.23px 5.23px rgba(0, 0, 0, 0.25)'
                 }}

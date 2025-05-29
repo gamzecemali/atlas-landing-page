@@ -51,7 +51,7 @@ const Section2 = () => {
         <div className='relative w-full max-w-[320px] sm:max-w-[480px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1220px] h-auto min-h-[300px] sm:min-h-[350px] md:min-h-[400px] lg:h-[449px] bg-black/20 backdrop-blur-[150px] sm:backdrop-blur-[200px] md:backdrop-blur-[230px] lg:backdrop-blur-[259px] rounded-[30px] sm:rounded-[40px] md:rounded-[50px] lg:rounded-[67px] border border-white/10 flex items-center justify-center py-6 sm:py-8 md:py-10 lg:py-0'>
           {/* Content */}
           <div className='flex flex-col items-center justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 w-full max-w-[280px] sm:max-w-[420px] md:max-w-[640px] lg:max-w-[860px] xl:max-w-[1080px] px-4 sm:px-6 md:px-8 lg:px-[70px]'>
-            <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[56px] font-normal leading-[1.1] tracking-[0.15em] text-center bg-gradient-to-br from-white to-[#DDDDDD] bg-clip-text text-transparent font-geometos'>
+            <h1 className='font-geometos text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[56px] font-normal leading-[1.1] tracking-[0.15em] text-center bg-gradient-to-br from-white to-[#DDDDDD] bg-clip-text text-transparent '>
               WE ARE ATLAS TWIN
             </h1>
             <p className='text-xs sm:text-sm md:text-base lg:text-[15.75px] font-semibold leading-[1.43] tracking-[0.007em] text-center text-white font-roboto'>

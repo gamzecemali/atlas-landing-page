@@ -251,7 +251,7 @@ const Section9 = () => {
     <div className="relative w-full flex flex-col items-center gap-6 sm:gap-8 md:gap-12 lg:gap-16 py-8 sm:py-10 md:py-12 lg:py-16 overflow-hidden">
       {/* Header Section */}
       <div className="flex flex-col justify-center items-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 w-full max-w-[1200px] px-4 sm:px-6 md:px-8">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-center bg-gradient-to-br from-white to-gray-300 bg-clip-text text-transparent tracking-wide sm:tracking-wider md:tracking-[0.15em] leading-tight">
+        <h2 className="font-geometos text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-center bg-gradient-to-br from-white to-gray-300 bg-clip-text text-transparent tracking-wide sm:tracking-wider md:tracking-[0.15em] leading-tight">
           OUR WORKING PROCESS
         </h2>
         <p className="text-sm sm:text-base md:text-xl lg:text-2xl font-semibold text-white text-center leading-relaxed tracking-tight drop-shadow-lg max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl">

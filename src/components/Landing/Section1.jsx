@@ -16,7 +16,7 @@ const Section1 = () => {
         <img src={image} className='w-full h-full object-cover' alt="" />
       </div>
       <div className='absolute bottom-16 sm:bottom-12 md:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-center'>
-        <div className='text-white text-xs sm:text-sm mb-1'>SCROLL</div>
+        <div className='text-white text-xs sm:text-sm mb-1 montserrat'>SCROLL</div>
         <button 
           onClick={scrollToNextSection}
           className='animate-bounce rounded-full p-2 sm:p-3 transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform'

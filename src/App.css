@@ -8,6 +8,28 @@
   }
 }
 
+@font-face {
+  font-family: 'Geometos'; /* Fonta vermek istediğiniz isim */
+  src: url('./assets/fonts/Geometos.ttf') format('truetype');
+  /* Eğer bold/italik versiyonları varsa: */
+  /* font-weight: normal; */
+  /* font-style: normal; */
+}
+
+@font-face {
+  font-family: 'Inter Variable'; /* Fonta vermek istediğiniz isim */
+  src: url('./assets/fonts/Inter.ttf') format('truetype');
+  /* font-weight: normal; */
+  /* font-style: normal; */
+}
+
+@font-face {
+  font-family: 'Roboto Variable'; /* Fonta vermek istediğiniz isim */
+  src: url('./assets/fonts/Roboto.ttf') format('truetype');
+  /* font-weight: normal; */
+  /* font-style: normal; */
+}
+
 .App {
   text-align: center;
 }
